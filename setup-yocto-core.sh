@@ -1,0 +1,36 @@
+#!/bin/sh
+
+unset SCRIPTS_BASE_VERSION
+unset BBFETCH2
+unset BBPATH
+unset DL_DIR
+unset BB_ENV_EXTRAWHITE
+unset OETREE
+unset BBLAYAERS
+unset BUILDDIR
+
+SETUP_PATH=$1
+
+export SCRIPTS_BASE_VERSION=3
+export BBFETCH2=True
+
+export OETREE=`pwd`
+export BUILDDIR=${OETREE}/${SETUP_PATH}
+
+export BBPATH=${OETREE}/${SETUP_PATH}
+export DL_DIR=${OETREE}/downloads
+
+if [ -z ${ORG_LD_LIBRARY_PATH} ] ; then
+ORG_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+    export ORG_LD_LIBRARY_PATH
+fi
+
+LD_LIBRARY_PATH=
+
+export LD_LIBRARY_PATH
+export LANG=C
+export BB_ENV_EXTRAWHITE="MACHINE DISTRO OETREE ANGSTROMLIBC LIBC DL_DIR BUILDDIR"
+export PATH=${OETREE}/poky/scripts:${OETREE}/poky/bitbake/bin:${PATH}
+export PYTHONPATH=${OETREE}/bitbake/lib
+
+cd $SETUP_PATH
