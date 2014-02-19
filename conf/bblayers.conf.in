@@ -1,0 +1,21 @@
+# LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+LCONF_VERSION = "6"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  ${OETREE}/poky/meta \
+  ${OETREE}/poky/meta-hob \
+  ${OETREE}/poky/meta-yocto \
+  ${OETREE}/poky/meta-yocto-bsp \
+  ${OETREE}/poky/meta-sunxi \
+  "
+BBLAYERS_NON_REMOVABLE ?= " \
+  ${OETREE}/poky/meta \
+  ${OETREE}/poky/meta-yocto \
+  ${OETREE}/poky/meta-sunxi \
+  "
+
+## TODO add ds stuff
