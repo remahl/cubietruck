@@ -11,11 +11,22 @@ BBLAYERS ?= " \
   ${OETREE}/poky/meta-yocto \
   ${OETREE}/poky/meta-yocto-bsp \
   ${OETREE}/poky/meta-sunxi \
+  ${OETREE}/poky/meta-dss-devel \
+  ${OETREE}/poky/meta-oe/meta-oe \
+  ${OETREE}/poky/meta-oe/meta-systemd \
+  ${OETREE}/poky/meta-oe/meta-networking \
+  ${OETREE}/poky/meta-oe/meta-webserver \
   "
+
 BBLAYERS_NON_REMOVABLE ?= " \
   ${OETREE}/poky/meta \
   ${OETREE}/poky/meta-yocto \
   ${OETREE}/poky/meta-sunxi \
+  ${OETREE}/poky/meta-dss-devel \
+  ${OETREE}/poky/meta-oe/meta-oe \
+  ${OETREE}/poky/meta-oe/meta-systemd \
+  ${OETREE}/poky/meta-oe/meta-networking \
+  ${OETREE}/poky/meta-oe/meta-webserver \
   "
 
 ## TODO add ds stuff
