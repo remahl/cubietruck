@@ -6,30 +6,20 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  ${OETREE}/poky/meta \
-  ${OETREE}/poky/meta-hob \
-  ${OETREE}/poky/meta-yocto \
-  ${OETREE}/poky/meta-yocto-bsp \
-  ${OETREE}/poky/meta-sunxi \
-  ${OETREE}/poky/meta-cubie-ds \
-"
-#  ${OETREE}/poky/meta-dss-devel \
-#  ${OETREE}/poky/meta-oe/meta-oe \
-#  ${OETREE}/poky/meta-oe/meta-systemd \
-#  ${OETREE}/poky/meta-oe/meta-networking \
-#  ${OETREE}/poky/meta-oe/meta-webserver \
+  REPLACE/meta \
+  REPLACE/meta-hob \
+  REPLACE/meta-yocto \
+  REPLACE/meta-yocto-bsp \
+  REPLACE/meta-sunxi  \
+  REPLACE/meta-cubie-ds \
+  "
 
 BBLAYERS_NON_REMOVABLE ?= " \
-  ${OETREE}/poky/meta \
-  ${OETREE}/poky/meta-yocto \
-  ${OETREE}/poky/meta-sunxi \
-  ${OETREE}/poky/meta-cubie-ds \
-"
+  REPLACE/meta \
+  REPLACE/meta-yocto \
+  REPLACE/meta-sunxi \
+  REPLACE/meta-cubie-ds \
+  "
 
-#  ${OETREE}/poky/meta-dss-devel \
-#  ${OETREE}/poky/meta-oe/meta-oe \
-#  ${OETREE}/poky/meta-oe/meta-systemd \
-#  ${OETREE}/poky/meta-oe/meta-networking \
-#  ${OETREE}/poky/meta-oe/meta-webserver \
 
 ## TODO add ds stuff
